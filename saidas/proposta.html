@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proposta Comercial — PeneVet Clínica Veterinária</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --card-highlight: #faf5ff;
+      --border: #e2e8f0;
+      --border-subtle: #f1f5f9;
+      --border-highlight: rgba(112, 45, 140, 0.3);
+      --border-teal: rgba(0, 168, 150, 0.3);
+      --purple: #702d8c;
+      --purple-light: #8e3eb0;
+      --purple-soft: #f5edf9;
+      --teal: #00a896;
+      --teal-light: #02c39a;
+      --teal-soft: #e6f7f5;
+      --green: #15803d;
+      --green-bg: #dcfce7;
+      --gold: #b45309;
+      --gold-bg: #fef3c7;
+      --text: #0f172a;
+      --text-muted: #64748b;
+      --text-dim: #94a3b8;
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; text-decoration: none !important; }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #f1f5f9;
+      color: var(--text);
+      line-height: 1.45;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Visualização em Tela (Navegador) */
+    @media screen {
+      body {
+        padding: 40px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+      }
+      .page-sheet {
+        width: 100%;
+        max-width: 860px;
+        background: #ffffff;
+        border: 1px solid var(--border);
+        border-radius: var(--radius-lg);
+        padding: 34px 38px;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05), 0 0 25px rgba(112, 45, 140, 0.06);
+        position: relative;
+      }
+      .page-sheet::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, #702d8c, #00a896, #8e3eb0);
+        border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+      }
+    }
+
+    /* Cabeçalho */
+    .brand-meta {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .brand-logo-img {
+      width: 58px;
+      height: 58px;
+      border-radius: var(--radius-md);
+      object-fit: cover;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+    }
+
+    .brand-title h1 {
+      font-size: 1.55rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      line-height: 1.15;
+    }
+
+    .brand-title h1 .pene { color: var(--purple); }
+    .brand-title h1 .vet { color: var(--teal); }
+
+    .brand-title p {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 2px;
+      font-weight: 500;
+    }
+
+    .header-badge {
+      text-align: right;
+      background: var(--purple-soft);
+      border: 1px solid rgba(112, 45, 140, 0.2);
+      padding: 8px 14px;
+      border-radius: var(--radius-md);
+    }
+
+    .header-badge span {
+      display: block;
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--purple);
+      font-weight: 700;
+    }
+
+    .header-badge strong {
+      font-size: 0.8rem;
+      color: #0f172a;
+      font-weight: 700;
+    }
+
+    /* Faixa de Demonstração Pronta */
+    .demo-strip {
+      background: linear-gradient(135deg, #f7f2fa 0%, #eef9f8 100%);
+      border: 1px solid rgba(112, 45, 140, 0.25);
+      border-radius: var(--radius-md);
+      padding: 13px 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      margin: 18px 0;
+    }
+
+    .demo-strip-text h4 {
+      font-size: 0.88rem;
+      font-weight: 800;
+      color: var(--purple);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .demo-strip-text p {
+      font-size: 0.77rem;
+      color: #334155;
+      margin-top: 2px;
+    }
+
+    .btn-demo {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--purple);
+      color: #ffffff !important;
+      font-size: 0.75rem;
+      font-weight: 800;
+      padding: 8px 16px;
+      border-radius: 20px;
+      white-space: nowrap;
+      box-shadow: 0 4px 12px rgba(112, 45, 140, 0.25);
+    }
+
+    /* Títulos de Seção */
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.95rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--purple);
+      margin-bottom: 12px;
+    }
+
+    .section-title i {
+      color: var(--teal);
+      font-size: 0.9rem;
+    }
+
+    /* Box de Alerta / Diagnóstico */
+    .alert-box {
+      background: #fef2f2;
+      border: 1px solid #fecaca;
+      border-left: 4px solid #ef4444;
+      border-radius: var(--radius-md);
+      padding: 14px 18px;
+      margin-bottom: 18px;
+    }
+
+    .alert-box h3 {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #991b1b;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 5px;
+    }
+
+    .alert-box p {
+      font-size: 0.79rem;
+      color: #7f1d1d;
+      line-height: 1.45;
+    }
+
+    .alert-box strong { color: #991b1b; }
+
+    /* Grid de Recursos / Entregas */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+
+    .feature-card {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 11px 14px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+    }
+
+    .feature-card h4 {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #0f172a;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 4px;
+    }
+
+    .feature-card h4 i {
+      color: var(--teal);
+      font-size: 0.8rem;
+    }
+
+    .feature-card p {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      line-height: 1.35;
+    }
+
+    /* Grid de Planos de Investimento (Página 2) */
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-bottom: 14px;
+    }
+
+    .plan-card {
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      border-radius: var(--radius-lg);
+      padding: 22px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    }
+
+    .plan-card.featured {
+      background: linear-gradient(180deg, #fdfbfe 0%, #ffffff 100%);
+      border: 2px solid var(--purple);
+      box-shadow: 0 8px 25px rgba(112, 45, 140, 0.12);
+    }
+
+    .plan-badge {
+      position: absolute;
+      top: -11px;
+      right: 18px;
+      background: linear-gradient(90deg, #702d8c, #8e3eb0);
+      color: #ffffff;
+      font-size: 0.65rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 3px 10px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(112, 45, 140, 0.3);
+    }
+
+    .plan-name {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 3px;
+    }
+
+    .plan-desc {
+      font-size: 0.73rem;
+      color: var(--text-muted);
+      min-height: 32px;
+      line-height: 1.3;
+      margin-bottom: 14px;
+    }
+
+    .plan-price-box {
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 12px 14px;
+      margin-bottom: 14px;
+    }
+
+    .plan-price-pix {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .price-value {
+      font-size: 1.45rem;
+      font-weight: 900;
+      color: #0f172a;
+      letter-spacing: -0.5px;
+    }
+
+    .price-curr {
+      font-size: 0.85rem;
+      color: var(--purple);
+      font-weight: 700;
+    }
+
+    .price-badge-pix {
+      background: var(--green-bg);
+      color: var(--green);
+      font-size: 0.65rem;
+      font-weight: 800;
+      padding: 2px 8px;
+      border-radius: 6px;
+      border: 1px solid rgba(21, 128, 61, 0.2);
+    }
+
+    .price-installments {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    .price-installments strong {
+      color: #0f172a;
+    }
+
+    .plan-items {
+      list-style: none;
+      margin-bottom: 18px;
+    }
+
+    .plan-items li {
+      font-size: 0.73rem;
+      color: #334155;
+      padding: 5px 0;
+      border-bottom: 1px solid #f1f5f9;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      line-height: 1.35;
+    }
+
+    .plan-items li:last-child { border-bottom: none; }
+
+    .plan-items li i {
+      color: var(--teal);
+      font-size: 0.75rem;
+      margin-top: 3px;
+      flex-shrink: 0;
+    }
+
+    .plan-items li strong { color: #0f172a; }
+
+    .btn-action {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border-radius: var(--radius-md);
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-align: center;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #702d8c 0%, #8e3eb0 100%);
+      color: #ffffff !important;
+      border: none;
+      box-shadow: 0 4px 15px rgba(112, 45, 140, 0.25);
+    }
+
+    .btn-secondary {
+      background: #f1f5f9;
+      color: #0f172a !important;
+      border: 1px solid #cbd5e1;
+    }
+
+    /* Box de Domínios Disponíveis */
+    .domain-box {
+      background: #fdfbf7;
+      border: 1px solid #fed7aa;
+      border-radius: var(--radius-md);
+      padding: 11px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      margin-bottom: 12px;
+    }
+
+    .domain-box-title {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: #9a3412;
+    }
+
+    .domain-pills {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .domain-pill {
+      background: #ffffff;
+      border: 1px solid #fdba74;
+      color: #7c2d12;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 6px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .domain-pill i {
+      color: #16a34a;
+      font-size: 0.65rem;
+    }
+
+    /* Box de Manutenção & Recorrência */
+    .maintenance-box {
+      background: #ffffff;
+      border: 1px solid var(--border-highlight);
+      border-radius: var(--radius-md);
+      padding: 13px 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 12px;
+      box-shadow: 0 2px 8px rgba(112, 45, 140, 0.04);
+    }
+
+    .maintenance-content h4 {
+      font-size: 0.83rem;
+      font-weight: 700;
+      color: #0f172a;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 3px;
+    }
+
+    .maintenance-content h4 i {
+      color: var(--purple);
+    }
+
+    .maintenance-content p {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    .maintenance-price {
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    .maintenance-price .val {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--purple);
+    }
+
+    /* ROI Card */
+    .roi-card {
+      background: linear-gradient(135deg, rgba(0, 168, 150, 0.08) 0%, rgba(112, 45, 140, 0.06) 100%);
+      border: 1px solid rgba(0, 168, 150, 0.25);
+      border-radius: var(--radius-md);
+      padding: 11px 16px;
+      margin-bottom: 14px;
+    }
+
+    .roi-card h4 {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--teal);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 3px;
+    }
+
+    .roi-card p {
+      font-size: 0.72rem;
+      color: #334155;
+      line-height: 1.35;
+    }
+
+    /* Rodapé da Proposta */
+    .proposal-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid #e2e8f0;
+      padding-top: 12px;
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      margin-top: auto;
+    }
+
+    /* Configuração Exata de Impressão (PDF A4) */
+    @media print {
+      @page {
+        size: A4 portrait;
+        margin: 0 !important;
+      }
+      html, body {
+        background: #ffffff !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+      .page-sheet {
+        width: 210mm !important;
+        height: 297mm !important;
+        max-height: 297mm !important;
+        box-sizing: border-box !important;
+        padding: 13mm 16mm 11mm 16mm !important;
+        background: #ffffff !important;
+        border: none !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+        position: relative !important;
+        overflow: hidden !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: space-between !important;
+        page-break-after: always !important;
+        break-after: page !important;
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+      }
+      .page-sheet:last-child {
+        page-break-after: auto !important;
+        break-after: auto !important;
+      }
+      .page-sheet::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, #702d8c, #00a896, #8e3eb0);
+      }
+      .btn-primary, .btn-secondary, .btn-demo {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== PÁGINA 1: Diagnóstico & Entregas ==================== -->
+  <div class="page-sheet page-1">
+    
+    <!-- Header -->
+    <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #e2e8f0; padding-bottom: 16px;">
+      <div class="brand-meta">
+        <img src="../site-penevet/dist/assets/logo.jpg" alt="PeneVet" class="brand-logo-img">
+        <div class="brand-title">
+          <h1><span class="pene">Pene</span><span class="vet">Vet</span></h1>
+          <p>Clínica Veterinária • Penedo • Itatiaia • Resende</p>
+        </div>
+      </div>
+      <div class="header-badge">
+        <span>Proposta Comercial</span>
+        <strong>Novembro de 2026</strong>
+      </div>
+    </div>
+
+    <!-- Faixa Demonstração Pronta -->
+    <div class="demo-strip">
+      <div class="demo-strip-text">
+        <h4><i class="fa-solid fa-bolt" style="color: var(--teal);"></i> A demonstração do site oficial já está 100% pronta!</h4>
+        <p>Com fotos reais da clínica e da Dra. Jéssica, catálogo de especialidades e agendamento no WhatsApp.</p>
+      </div>
+      <a href="https://penevet.vercel.app/" target="_blank" class="btn-demo">
+        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        <span>Abrir Demonstração</span>
+      </a>
+    </div>
+
+    <!-- Diagnóstico Estratégico -->
+    <div>
+      <div class="section-title">
+        <i class="fa-solid fa-chart-line"></i>
+        <span>Diagnóstico & Oportunidade Local</span>
+      </div>
+
+      <div class="alert-box">
+        <h3><i class="fa-solid fa-triangle-exclamation"></i> Regularização do Google Maps & Ativação de Novos Pacientes</h3>
+        <p>
+          A PeneVet já possui o mais difícil: <strong>avaliações 5 estrelas impecáveis</strong> no Google e a confiança dos tutores de Penedo. No entanto, a ficha no Google Maps consta atualmente como <strong>"Fechado Temporariamente"</strong> e sem um site oficial. Quem pesquisa por <em>"veterinário em Penedo"</em> pelo celular conclui que a clínica encerrou o atendimento e recorre a concorrentes. A ativação do <strong>site oficial</strong> e a regularização imediata do Google reabrem esse canal direto para consultas e procedimentos todos os dias.
+        </p>
+      </div>
+    </div>
+
+    <!-- Escopo das Entregas -->
+    <div>
+      <div class="section-title">
+        <i class="fa-solid fa-cubes"></i>
+        <span>O que está incluso na entrega</span>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <h4><i class="fa-solid fa-mobile-screen-button"></i> Site Mobile-First Ultrarrápido</h4>
+          <p>Construído em código moderno e ultraleve (HTML5/CSS estático). Carrega em menos de 1 segundo no 4G/5G, garantindo que o tutor na rua não desista da página.</p>
+        </div>
+        <div class="feature-card">
+          <h4><i class="fa-brands fa-whatsapp"></i> Agendamento em 1-Toque</h4>
+          <p>Botão acolhedor integrado que abre a conversa no WhatsApp da clínica com mensagem padrão de agendamento já preenchida para facilitar o contato.</p>
+        </div>
+        <div class="feature-card">
+          <h4><i class="fa-solid fa-stethoscope"></i> Catálogo de Especialidades</h4>
+          <p>Apresentação clara de Clínica Geral, Vacinas e Prevenção, Cirurgias com Anestesia Inalatória, Internação 24h e Medicina de Felinos e Silvestres.</p>
+        </div>
+        <div class="feature-card">
+          <h4><i class="fa-solid fa-star"></i> Depoimentos 5.0 do Google</h4>
+          <p>Integração dos relatos reais dos tutores (David, Erika, Fran) com selo de verificação oficial, transmitindo segurança imediata a novos clientes.</p>
+        </div>
+        <div class="feature-card">
+          <h4><i class="fa-solid fa-map-location-dot"></i> Endereço & Rota Guiada</h4>
+          <p>Localização na Av. Brasil, 145 com botão de traçado de rota no Google Maps e Waze, facilitando a chegada de moradores e turistas em Penedo.</p>
+        </div>
+        <div class="feature-card">
+          <h4><i class="fa-solid fa-circle-check"></i> Atualização no Google Meu Negócio</h4>
+          <p>Reativação do status "Aberto", inserção do link do site oficial e configuração completa da ficha da clínica para o topo das pesquisas locais.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer P1 -->
+    <div class="proposal-footer">
+      <div>
+        <strong style="color: #0f172a;">PeneVet Clínica Veterinária</strong> • Dra. Jéssica Nunes
+      </div>
+      <div>
+        <span>Página 1 de 2 • Presença Digital & Posicionamento Local</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ==================== PÁGINA 2: Planos de Investimento & Fechamento ==================== -->
+  <div class="page-sheet page-2">
+
+    <!-- Seção de Planos -->
+    <div>
+      <div class="section-title" style="margin-bottom: 12px;">
+        <i class="fa-solid fa-tag"></i>
+        <span>Planos de Investimento (Sul Fluminense)</span>
+      </div>
+
+      <div class="pricing-grid">
+        
+        <!-- Opção 1 -->
+        <div class="plan-card">
+          <div>
+            <div class="plan-name">Presença Essencial</div>
+            <div class="plan-desc">Site oficial + regularização no Google Maps com hospedagem e domínio inclusos.</div>
+            
+            <div class="plan-price-box">
+              <div class="plan-price-pix">
+                <span class="price-value"><span class="price-curr">R$</span> 891,00</span>
+                <span class="price-badge-pix">10% OFF no Pix</span>
+              </div>
+              <div class="price-installments">ou em até <strong>3x de R$ 330,00</strong> sem juros (R$ 990,00)</div>
+            </div>
+
+            <ul class="plan-items">
+              <li><i class="fa-solid fa-check"></i> <span>Site oficial completo no ar em 48h</span></li>
+              <li><i class="fa-solid fa-check"></i> <span><strong>Hospedagem e domínio inclusos</strong></span></li>
+              <li><i class="fa-solid fa-check"></i> <span>Retirada do aviso "Fechado Temporariamente" no Google</span></li>
+              <li><i class="fa-solid fa-check"></i> <span>Conexão do botão Website na ficha do Google Maps</span></li>
+              <li><i class="fa-solid fa-check"></i> <span>Botões diretos de agendamento no WhatsApp</span></li>
+              <li><i class="fa-solid fa-shield-halved" style="color: var(--teal);"></i> <span>Taxa de manutenção mensal: <strong>R$ 99,90/mês</strong></span></li>
+              <li><i class="fa-solid fa-pen-to-square" style="color: var(--teal);"></i> <span><strong>1 alteração por mês</strong> inclusa</span></li>
+            </ul>
+          </div>
+
+          <a href="https://api.whatsapp.com/send?phone=5524992087767&text=Ol%C3%A1%20Rafael!%20Gostei%20da%20Op%C3%A7%C3%A3o%201%20(Presen%C3%A7a%20Essencial)%20para%20a%20PeneVet." target="_blank" class="btn-action btn-secondary">
+            <span>Escolher Opção 1</span>
+          </a>
+        </div>
+
+        <!-- Opção 2 -->
+        <div class="plan-card featured">
+          <span class="plan-badge">Mais Recomendado</span>
+          <div>
+            <div class="plan-name" style="color: var(--purple);">Autoridade Total</div>
+            <div class="plan-desc">Domínio próprio + Google Meu Negócio otimizado e gestão contínua mensal.</div>
+            
+            <div class="plan-price-box">
+              <div class="plan-price-pix">
+                <span class="price-value"><span class="price-curr">R$</span> 1.161,00</span>
+                <span class="price-badge-pix">10% OFF no Pix</span>
+              </div>
+              <div class="price-installments">ou em até <strong>3x de R$ 430,00</strong> sem juros (R$ 1.290,00)</div>
+            </div>
+
+            <ul class="plan-items">
+              <li><i class="fa-solid fa-check"></i> <span><strong>Tudo da Opção 1</strong> incluso</span></li>
+              <li><i class="fa-solid fa-check"></i> <span><strong>Hospedagem e domínio inclusos</strong></span></li>
+              <li><i class="fa-solid fa-check"></i> <span><strong>Google Meu Negócio Otimizado:</strong> fotos, horários e SEO</span></li>
+              <li><i class="fa-solid fa-check"></i> <span>Hospedagem em nuvem gerenciada com backup contínuo</span></li>
+              <li><i class="fa-solid fa-shield-halved" style="color: var(--purple);"></i> <span>Taxa de gestão contínua e suporte: <strong>R$ 129,90/mês</strong></span></li>
+              <li><i class="fa-solid fa-pen-to-square" style="color: var(--purple);"></i> <span>Até <strong>5 alterações por mês</strong> inclusas</span></li>
+            </ul>
+          </div>
+
+          <a href="https://api.whatsapp.com/send?phone=5524992087767&text=Ol%C3%A1%20Rafael!%20Quero%20a%20Op%C3%A7%C3%A3o%202%20(Autoridade%20Total)%20com%20gest%C3%A3o%20completa%20para%20a%20PeneVet." target="_blank" class="btn-action btn-primary">
+            <i class="fa-solid fa-rocket"></i>
+            <span>Escolher Autoridade Total</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Observação dos Domínios Disponíveis -->
+    <div class="domain-box">
+      <div class="domain-box-title">
+        <i class="fa-solid fa-globe"></i>
+        <span>Domínios Disponíveis para Registro Imediato:</span>
+      </div>
+      <div class="domain-pills">
+        <span class="domain-pill"><i class="fa-solid fa-circle-check"></i> penevet.com.br <span style="font-size: 0.65rem; color: #16a34a; font-weight: 800;">(Recomendado)</span></span>
+        <span class="domain-pill"><i class="fa-solid fa-circle-check"></i> clinicapenevet.com.br</span>
+      </div>
+    </div>
+
+    <!-- Adendo de Manutenção e Recorrência -->
+    <div class="maintenance-box">
+      <div class="maintenance-content">
+        <h4><i class="fa-solid fa-shield-halved"></i> Planos de Manutenção & Suporte Mensal (10% do valor do plano)</h4>
+        <p>Na <strong>Opção 1</strong>, a manutenção mensal é de <strong>R$ 99,90/mês</strong> com <strong>1 alteração por mês inclusa</strong> e hospedagem de domínio. Na <strong>Opção 2</strong>, a gestão contínua completa é de <strong>R$ 129,90/mês</strong> com <strong>até 5 alterações por mês inclusas</strong>, monitoramento do Google Maps e suporte prioritário no WhatsApp sem fidelidade.</p>
+      </div>
+      <div class="maintenance-price">
+        <div class="val"><span style="font-size: 0.85rem; color: #64748b; font-weight: 700;">R$</span> 99,90<span style="font-size: 0.72rem; color: var(--text-muted); font-weight: 400;">/mês (Opç. 1)</span></div>
+        <div style="font-size: 0.8rem; color: var(--purple); font-weight: 800; margin-top: 2px;">R$ 129,90<span style="font-size: 0.72rem; color: var(--text-muted); font-weight: 400;">/mês (Opç. 2)</span></div>
+      </div>
+    </div>
+
+    <!-- ROI Card -->
+    <div class="roi-card">
+      <h4><i class="fa-solid fa-calculator"></i> Retorno sobre o Investimento (ROI) Imediato</h4>
+      <p>Nas agências tradicionais de Resende e Volta Redonda, um projeto similar custa entre R$ 1.800 e R$ 3.000 + R$ 300/mês. Na PeneVet, <strong>até 5 consultas captadas pelo Google Maps</strong> já cobrem, com sobra, o investimento a longo prazo do site.</p>
+    </div>
+
+    <!-- Footer P2 -->
+    <div class="proposal-footer">
+      <div>
+        <strong style="color: #0f172a;">Rafael Chagas — Presença Digital & Captação Local</strong>
+        <p style="font-size: 0.7rem; margin-top: 1px;">Penedo / Sul Fluminense • RJ</p>
+      </div>
+      <div style="display: flex; align-items: center; gap: 8px; color: #0f172a;">
+        <i class="fa-brands fa-whatsapp" style="color: #16a34a; font-size: 0.95rem;"></i>
+        <span style="font-weight: 700;">(24) 99208-7767</span>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
